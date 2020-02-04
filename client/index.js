@@ -9,6 +9,7 @@ import { Route, Switch } from 'react-router' // react-router v4/v5
 import { ConnectedRouter } from 'connected-react-router'
 import { BrowserRouter as Router} from 'react-router-dom'
 import configureStore, { history } from './configureStore'
+import { Menu } from './components/menu/index.js'
 
 
 const store = configureStore(
@@ -19,8 +20,9 @@ ReactDOM.render((
 		<Provider store={store}>
 			<ConnectedRouter history={history}>
 				<Router>
-	                <Route path="/" component={App}/>
-	            </Router>
+					<Route path="/menu" component={Menu}/>
+	      	<Route path="/" component={App}/>
+	      </Router>
 			</ConnectedRouter>
 		</Provider>
 		),document.getElementById('root'));

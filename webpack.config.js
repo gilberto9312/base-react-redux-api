@@ -27,7 +27,7 @@ const optimization = {
           commons: { test: /[\\/]node_modules[\\/]/, name: "common", chunks: "all" }
       }
   }
-}; 
+};
 
 module.exports = {
   entry:
@@ -54,13 +54,13 @@ module.exports = {
           // fallback: 'style-loader',
           use: ["css-loader", "sass-loader"]
         }),
-      
+
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader"
-      }, 
+      },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -72,12 +72,20 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    contentBase: './dist',
+    watchOptions: {
+      ignored: /node_modules/
+    }
+  },
 //optimization,
 plugins: [
 
-  
+
    /* new webpack.DllReferencePlugin({
-    
+
     manifest: require('./dist/modules-manifest.json')
   }), */
   new ExtractTextPlugin("css/[name].css"),
@@ -85,7 +93,7 @@ plugins: [
   /*new CopyPlugin([
     { from: './serve.js', to: './' }
   ])*/
-  
+
 ]
-    
+
 }
