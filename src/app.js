@@ -5,6 +5,7 @@ import { Provider as StoreProvider } from 'react-redux'
 import { renderRoutes } from 'react-router-config'
 import { configureStore } from './store'
 import routes from './routes'
+import './mock'
 
 const history = createBrowserHistory()
 const store = configureStore()

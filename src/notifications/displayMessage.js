@@ -1,6 +1,5 @@
 import { Component } from 'react'
-import Swal from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import Swal from 'sweetalert2'
 
 export class DisplayMessage extends Component {
   constructor(props) {

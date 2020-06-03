@@ -1,5 +1,5 @@
 {
-  "name": "webpack-live-coding",
+  "name": "webpack",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.9.0",
+    "axios": "^0.19.2",
+    "axios-mock-adapter": "^1.18.1",
     "dotenv-webpack": "^1.8.0",
     "history": "^4.10.1",
     "react": "^16.13.1",
